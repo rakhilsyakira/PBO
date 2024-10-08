@@ -114,10 +114,22 @@ class Kapal {
   kapalPenumpang.tambahPenumpang(20); // Ini harus menampilkan pesan bahwa kapasitas penuh
   console.log(kapalPenumpang.infoPenumpang());  // Menampilkan informasi penumpang setelah percobaan
 
+ // Cek apakah kapasitas melebihi batas
+  console.log("--- Coba tambahkan penumpang yang melebihi kapasitas ---");
+  kapalPenumpang.tambahPenumpang(20); 
+  console.log(kapalPenumpang.infoPenumpang());  
+  console.log("--- Informasi Kapal Barang ---");
   console.log(kapalBarang.deskripsiKapal());
-  
-  console.log(kapalNelayan.deskripsiKapal());
+  console.log(`Muatan saat ini: ${kapalBarang.barangMuatan} ton.`);
 
+  console.log("--- Informasi Kapal Nelayan ---");
+  console.log(kapalNelayan.deskripsiKapal());
+  console.log(`Hasil tangkapan harian: ${kapalNelayan.hasilTangkap} ton ikan.`);
+
+  console.log("--- Informasi Kapal Pesiar ---");
   console.log(kapalPesiar.deskripsiKapal());
-  
+  console.log(`Fasilitas yang tersedia: ${kapalPesiar.fasilitas}.`);
+
+  console.log("--- Informasi Kapal Penelitian ---");
   console.log(kapalPenelitian.deskripsiKapal());
+  console.log(`Peralatan penelitian yang ada: ${kapalPenelitian.peralatan}.`);
